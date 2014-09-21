@@ -36,6 +36,7 @@ TEMPLATE_CONTEXT_PROCESSORS = TCP + (
 # Application definition
 
 INSTALLED_APPS = (
+    'suit',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -51,10 +52,12 @@ INSTALLED_APPS = (
     'editarea',
     'django_extensions',
     'debug_toolbar.apps.DebugToolbarConfig',
+    'foundation',
+    'behavui',
+    'menu',
 )
 
 MIDDLEWARE_CLASSES = (
-    'suit',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
