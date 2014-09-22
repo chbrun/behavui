@@ -55,6 +55,7 @@ INSTALLED_APPS = (
     'foundation',
     'behavui',
     'menu',
+    'pipeline',
 )
 
 MIDDLEWARE_CLASSES = (

@@ -1,0 +1,23 @@
+{% extends "foundation/base.html" %}
+{% load menu %}{% generate_menu %}
+
+{%block base_body %}
+    <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+            <li class="name">
+                <h1><a href="/">BehavUI</a></h1>
+            </li>
+        </ul>
+        <section class="top-bar-section">
+            <ul class="left">
+                {% for item in menus.main %}
+                    <li> <a href="{{ item.url }}">{{ item.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
+    </nav>
+    {% block content %}Content{% endblock content %}
+    menu : 
+    {{ menus }}
+
+{%endblock base_body %}
