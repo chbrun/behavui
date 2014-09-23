@@ -56,6 +56,7 @@ INSTALLED_APPS = (
     'behavui',
     'menu',
     'pipeline',
+    'tastypie',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -112,3 +113,10 @@ EDITAREA_DEFAULT_ARGS = lambda textarea_id:\
 
 EDITAREA_JS_FOLDER = '/static/'
 
+
+CACHES = {
+        'default' : {
+            'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+            'LOCATION': os.path.join(BASE_DIR,'var/cache'),
+            }
+        }
