@@ -4,7 +4,7 @@
      <div class="large-12 columns">
         <ul>
             {% for feature in object_list %}
-                <li><a href="/features/{{ feature.id }}/">{{ feature.name }}</a></li>
+            <li><a href="{% url 'feature_detail' feature.id %}">{{ feature.name }}</a></li>
             {% endfor %}
         </ul>
     </div>

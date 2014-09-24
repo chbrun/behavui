@@ -5,7 +5,7 @@
      <div class="large-12 columns">
         <ul>
             {% for project in object_list %}
-                <li><a href="/projects/{{ project.id }}/">{{ project.name }}</a></li>
+            <li><a href="{% url 'project_detail'  project.id %}">{{ project.name }}</a></li>
             {% endfor %}
         </ul>
         {# .... **Now the pagination section** .... #}

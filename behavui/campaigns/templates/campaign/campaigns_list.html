@@ -4,7 +4,7 @@
      <div class="large-12 columns">
         <ul>
             {% for campaign in object_list %}
-                <li><a href="/campaigns/{{ campaign.id }}/">{{ campaign.name }}</a></li>
+            <li><a href="{% url 'campaign_detail' campaign.id %}">{{ campaign.name }}</a></li>
             {% endfor %}
         </ul>
     </div>
