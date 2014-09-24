@@ -2,10 +2,11 @@ from django.conf.urls import patterns, url, include
 from tastypie.api import Api
 
 from . import views
-#from .api import ProjectResource
+from .api import FeatureResource, ScenarioResource
 
 v1_api = Api(api_name="v1")
-#v1_api.register(ProjectResource())
+v1_api.register(FeatureResource())
+v1_api.register(ScenarioResource())
 
 urlpatterns = patterns('',
         url(r'^$', views.IndexView.as_view(), name='features_list'),
