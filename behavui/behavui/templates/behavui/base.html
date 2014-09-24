@@ -13,11 +13,11 @@
         <section class="top-bar-section">
             <ul class="right">
                 {% for item in menus.main %}
-                <li {% if item.has_submenu %}class="has-dropdown"{% endif %}>
+                <li {% if item.children %}class="has-dropdown"{% endif %}>
                     <a href="{{ item.url }}">{{ item.title }}</a>
-                    {% if item.has_submenu %}
+                    {% if item.children %}
                         <ul class="dropdown">
-                            {% for subitem in item.submenu %}
+                            {% for subitem in item.children %}
                             <li><a href="{{ subitem.url }}">{{ subitem.title }}</a></li>
                             {% endfor %}
                         </ul>

@@ -1,0 +1,12 @@
+{% extends "behavui/base.html" %}
+{% block content %}
+{% load syntax_color %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'features/style.css' %}" />
+    <div class="row">
+        <div class="large-12 columns">
+            <h2>{{ feature.name }}</h2>
+        {{ script|colorize:"cucumber" }}
+        </div>
+    </div>
+{% endblock content %}

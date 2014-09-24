@@ -4,7 +4,7 @@ from django.template import RequestContext, loader
 
 from django.views import generic
 
-from projects.models import Project
+from .models import Project
 
 # Create your views here.
 class IndexView(generic.ListView):

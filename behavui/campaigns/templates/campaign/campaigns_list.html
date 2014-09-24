@@ -1,0 +1,12 @@
+{% extends "behavui/base.html" %}
+{% block content %}
+ <div class="row">
+     <div class="large-12 columns">
+        <ul>
+            {% for campaign in object_list %}
+                <li><a href="/campaigns/{{ campaign.id }}/">{{ campaign.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock content %}

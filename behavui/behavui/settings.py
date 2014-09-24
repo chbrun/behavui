@@ -51,6 +51,7 @@ INSTALLED_APPS = (
     'features',
     'editarea',
     'django_extensions',
+    'django_extensions.utils',
     'debug_toolbar.apps.DebugToolbarConfig',
     'foundation',
     'behavui',
