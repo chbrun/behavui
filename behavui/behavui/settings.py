@@ -43,8 +43,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'viewflow',
-    'viewflow.site',
     'permission',
     'projects',
     'campaigns',
@@ -57,7 +55,9 @@ INSTALLED_APPS = (
     'behavui',
     'menu',
     'pipeline',
-    'tastypie',
+    #'tastypie',
+    'rest_framework',
+    'django_xworkflows',
 )
 
 MIDDLEWARE_CLASSES = (

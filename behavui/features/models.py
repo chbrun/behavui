@@ -15,15 +15,14 @@ class Feature(models.Model):
         script = ()
         for scenario in self.scenario_set.all():
             script += (scenario.get_script(),)
-        print(script)
-        return str.join('\r\r',script)
+        return str.join('\r\r', script)
 
 
 class Scenario(models.Model):
-    title        = models.CharField(max_length=100) 
+    title        = models.CharField(max_length = 100)
     feature      = models.ForeignKey(Feature)
     precondition = models.TextField()
-    auto         = models.BooleanField(default=False)
+    auto         = models.BooleanField(default = False)
 
     def __str__(self):
         return self.title

@@ -1,0 +1,1 @@
+FEATURE_NB_MAX=5

@@ -10,5 +10,6 @@ urlpatterns = patterns('',
     url(r'^projects/', include('projects.urls')),
     url(r'^campaigns/', include('campaigns.urls')),
     url(r'^features/', include('features.urls')),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
 )
