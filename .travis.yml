@@ -11,7 +11,7 @@ install:
     - pip install coveralls
 
 script:
-    - cd behavui; coverage run manage.py test
+    - cd behavui; coverage run --rcfile=.coveragerc manage.py test
 
 after_success:
-    - coveralls
+    - coveralls --rcfile=.coveragerc
