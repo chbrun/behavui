@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models, migrations
-import django_xworkflows.models
+from django_xworkflows.models import StateField, _SerializedWorkflow
 
 
 class Migration(migrations.Migration):
@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='campaignrun',
             name='status',
-            field=django_xworkflows.models.StateField(max_length=16, workflow=django_xworkflows.models._SerializedWorkflow(states=['new', 'run', 'ok', 'nok'], initial_state='new', name='CampaignWorkflow')),
+            field=StateField(max_length=16, workflow=_SerializedWorkflow(states=['new', 'run', 'ok', 'nok'], initial_state='new', name='CampaignWorkflow')),
             preserve_default=True,
         ),
     ]

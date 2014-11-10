@@ -23,6 +23,7 @@ class Scenario(models.Model):
     feature      = models.ForeignKey(Feature)
     precondition = models.TextField()
     auto         = models.BooleanField(default = False)
+    scenario     = models.TextField()
 
     def __str__(self):
         return self.title
