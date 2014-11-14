@@ -10,7 +10,7 @@ class FeatureTest(TestCase):
         project1 = Project.objects.create(name="Project1")
         Feature.objects.create(name="feature1",
                                description="description feature",
-                               project = project1)
+                               project=project1)
 
     def test_str(self):
         feature1 = Feature.objects.get(name='feature1')

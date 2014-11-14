@@ -9,16 +9,16 @@ class StepTest(TestCase):
         project1 = Project.objects.create(name="project1")
         feature1 = Feature.objects.create(name="feature1",
                                           description="description1",
-                                          project = project1)
+                                          project=project1)
         scenario1 = Scenario.objects.create(title="scenario1",
-                                            feature = feature1,
-                                            precondition = "",
-                                            auto = True,
-                                            scenario = "")
-        Step.objects.create(scenario = scenario1,
-                            order = 1,
-                            action = "",
-                            result = "")
+                                            feature=feature1,
+                                            precondition="",
+                                            auto=True,
+                                            scenario="")
+        Step.objects.create(scenario=scenario1,
+                            order=1,
+                            action="",
+                            result="")
 
     def test_str(self):
         step1 = Step.objects.get(pk=1)

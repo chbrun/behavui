@@ -1,6 +1,6 @@
 from tastypie.resources import ModelResource
-
 from .models import Feature, Scenario
+
 
 class FeatureResource(ModelResource):
     class Meta:
@@ -11,6 +11,7 @@ class FeatureResource(ModelResource):
         bundle.data['script'] = bundle.obj.get_script()
         return bundle
 
+
 class ScenarioResource(ModelResource):
     class Meta:
         queryset = Scenario.objects.all()
@@ -19,5 +20,3 @@ class ScenarioResource(ModelResource):
     def dehydrate(self, bundle):
         bundle.data['script'] = bundle.obj.get_script()
         return bundle
-
-

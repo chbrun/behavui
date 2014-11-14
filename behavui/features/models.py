@@ -1,6 +1,6 @@
 from django.db import models
-
 from projects.models import Project
+
 
 # Create your models here.
 class Feature(models.Model):
@@ -19,10 +19,10 @@ class Feature(models.Model):
 
 
 class Scenario(models.Model):
-    title        = models.CharField(max_length = 100)
+    title        = models.CharField(max_length=100)
     feature      = models.ForeignKey(Feature)
     precondition = models.TextField()
-    auto         = models.BooleanField(default = False)
+    auto         = models.BooleanField(default=False)
     scenario     = models.TextField()
 
     def __str__(self):
@@ -37,8 +37,8 @@ class Scenario(models.Model):
                 retour += ("    %s" % ligne,)
             for ligne in step.result.split('\n'):
                 retour += ("    %s" % ligne,)
-        script = [x.replace("\r",'').replace('\n','') for x in retour if str.strip(x)!='']
-        return str.join('\r',script)
+        script = [x.replace("\r", '').replace('\n', '') for x in retour if str.strip(x)!='']
+        return str.join('\r', script)
 
 
 class Step(models.Model):
@@ -49,4 +49,3 @@ class Step(models.Model):
 
     def __str__(self):
         return "step %s de %s" % (str(self.order), self.scenario)
-

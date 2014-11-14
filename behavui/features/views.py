@@ -7,6 +7,7 @@ from rest_framework import viewsets
 from .models import Feature, Scenario
 from .serializers import FeatureSerializer, ScenarioSerializer
 
+
 # Create your views here.
 class IndexView(generic.ListView):
     model = Feature
@@ -15,6 +16,7 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         return Feature.objects.order_by('name')
+
 
 class DetailView(generic.DetailView):
     model         = Feature
@@ -30,6 +32,7 @@ class DetailView(generic.DetailView):
 class FeatureViewSet(viewsets.ModelViewSet):
     queryset = Feature.objects.all()
     serializer_class = FeatureSerializer
+
 
 class ScenarioViewSet(viewsets.ModelViewSet):
     queryset = Scenario.objects.all()

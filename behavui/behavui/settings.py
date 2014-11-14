@@ -55,7 +55,7 @@ INSTALLED_APPS = (
     'behavui',
     'menu',
     'pipeline',
-    #'tastypie',
+    # 'tastypie',
     'rest_framework',
     'django_xworkflows',
 )
@@ -110,14 +110,14 @@ SUIT_CONFIG = {
 }
 
 EDITAREA_DEFAULT_ARGS = lambda textarea_id:\
-    '{id: "'+textarea_id+'", syntax: "behavefr", start_highlight: true, language: "fr" }'
+    '{id: "' + textarea_id + '", syntax: "behavefr", start_highlight: true, language: "fr" }'
 
 EDITAREA_JS_FOLDER = '/static/'
 
 
 CACHES = {
-        'default' : {
-            'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-            'LOCATION': os.path.join(BASE_DIR,'var/cache'),
-            }
-        }
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': os.path.join(BASE_DIR, 'var/cache'),
+    }
+}

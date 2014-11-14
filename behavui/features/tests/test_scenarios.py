@@ -11,10 +11,10 @@ class ScenarioTest(TestCase):
                                           description="test",
                                           project=project1)
         scenario1 = Scenario.objects.create(title="scenario1",
-                                            feature = feature1,
+                                            feature=feature1,
                                             precondition="",
-                                            auto = True,
-                                            scenario = "")
+                                            auto=True,
+                                            scenario="")
 
     def test_str(self):
         scenario1 = Scenario.objects.get(pk=1)

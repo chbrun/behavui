@@ -5,6 +5,7 @@ from features.models import Scenario
 from django_xworkflows import models as xwf_models
 from .workflows import CampaignWorkflow
 
+
 # Create your models here.
 class Campaign(models.Model):
     name        = models.CharField(max_length=100)
@@ -14,6 +15,7 @@ class Campaign(models.Model):
 
     def __str__(self):
         return self.name
+
 
 class CampaignRun(xwf_models.WorkflowEnabled, models.Model):
     runAt    = models.DateTimeField()
